@@ -1,0 +1,5 @@
+var today = new Date();
+var expDate = new Date($("#cart-expyear").val(),($("#cart-expmonth").val()-1)); // JS Date Month is 0-11 not 1-12 grrr
+if(today.getTime() > expDate.getTime()) {
+    messages.push("Your Card is expired. Please check expiry date.");
+}
